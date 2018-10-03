@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// ReactDOM render one component to 'document.getElementById('root'));'
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// React is an library
+// Use the ReactDom for a web: jsx --ReactDom--> html
+// Use the ReactNative for a mobile app: jsx --ReactNative--> Mobile app?
