@@ -6,25 +6,6 @@ import Movie from './Movie';
 class App extends Component {
 
   state = {
-    greeting: 'Hello!',
-    movies: [
-      {
-        title: "Matrix",
-        poster: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/The_Matrix_Poster.jpg/220px-The_Matrix_Poster.jpg"
-      },
-      {
-        title: "Full metal Jacket",
-        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCR7dxscYcXcZzqNRSz7KvdmdDJq3rVJKxOzxxLOLJmSg1uRZ_lQ"
-      },
-      {
-        title: "Oldboy",
-        poster: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Oldboykoreanposter.jpg/220px-Oldboykoreanposter.jpg"
-      },
-      {
-        title: "Star Wars",
-        poster: "https://images-na.ssl-images-amazon.com/images/I/81mhcR03dIL._SY445_.jpg"
-      }
-    ]
   }
 
   componentDidMount(){
@@ -34,7 +15,22 @@ class App extends Component {
     setTimeout(() => {
       this.setState({
         movies: [
-          ...this.state.movies,
+          {
+            title: "Matrix",
+            poster: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/The_Matrix_Poster.jpg/220px-The_Matrix_Poster.jpg"
+          },
+          {
+            title: "Full metal Jacket",
+            poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCR7dxscYcXcZzqNRSz7KvdmdDJq3rVJKxOzxxLOLJmSg1uRZ_lQ"
+          },
+          {
+            title: "Oldboy",
+            poster: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Oldboykoreanposter.jpg/220px-Oldboykoreanposter.jpg"
+          },
+          {
+            title: "Star Wars",
+            poster: "https://images-na.ssl-images-amazon.com/images/I/81mhcR03dIL._SY445_.jpg"
+          },
           {
             title: "trainspotting",
             poster: "https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Trainspotting_ver2.jpg/250px-Trainspotting_ver2.jpg"
@@ -57,9 +53,11 @@ class App extends Component {
         <Movie title={movieTitles[2]} poster={movieImages[2]}/>
         <Movie title={movieTitles[3]} poster={movieImages[3]}/> */}
 
-        {this.state.movies.map(movie => {
+        {/* {this.state.movies.map(movie => {
           return <Movie title={movie.title} poster={movie.poster} />
-        })}
+        })} */}
+
+        Loading
 
         {/* {[
           <Movie title={movies[0].title} poster={movies[0].poster} />
