@@ -23,11 +23,25 @@ const movies = [
 
 // Movie list component
 class App extends Component {
+
+  state = {
+    greeting: 'Hello!'
+  }
+
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        greeting: 'Hello again!'
+      })
+    }, 2000)
+  }
+
   // All component must have a render function
   // It shows what it is.
   render() {
     return (
       <div className="App">
+        {this.state.greeting}
         {/* Use title props to pass the data to Movie component*/}
         {/* <Movie title={movieTitles[0]} poster={movieImages[0]}/>
         <Movie title={movieTitles[1]} poster={movieImages[1]}/>
