@@ -37,8 +37,14 @@ class App extends Component {
           }
         ]
       })
-    }, 5000)
+    }, 2000)
+  }
 
+  _renderMovies = () => {
+    const movies = this.state.movies.map(movie => {
+      return <Movie title={movie.title} poster={movie.poster} />
+    })
+    return movies
   }
 
   // All component must have a render function
@@ -57,7 +63,9 @@ class App extends Component {
           return <Movie title={movie.title} poster={movie.poster} />
         })} */}
 
-        Loading
+        {/* Loading */}
+
+        {this.state.movies ? this._renderMovies() : 'Loading'}
 
         {/* {[
           <Movie title={movies[0].title} poster={movies[0].poster} />
