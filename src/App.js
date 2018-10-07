@@ -9,35 +9,44 @@ class App extends Component {
   }
 
   componentDidMount(){
+    fetch('https://yts.ag/api/v2/list_movies.json?sort_by=rating')
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err => console.log(err))
+    // .catch(function(err){
+    //   console.log(err)
+    // })
+
     // setTimeout(function(){
     //   console.log('hello')
     // }, 2000)
-    setTimeout(() => {
-      this.setState({
-        movies: [
-          {
-            title: "Matrix",
-            poster: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/The_Matrix_Poster.jpg/220px-The_Matrix_Poster.jpg"
-          },
-          {
-            title: "Full metal Jacket",
-            poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCR7dxscYcXcZzqNRSz7KvdmdDJq3rVJKxOzxxLOLJmSg1uRZ_lQ"
-          },
-          {
-            title: "Oldboy",
-            poster: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Oldboykoreanposter.jpg/220px-Oldboykoreanposter.jpg"
-          },
-          {
-            title: "Star Wars",
-            poster: "https://images-na.ssl-images-amazon.com/images/I/81mhcR03dIL._SY445_.jpg"
-          },
-          {
-            title: "trainspotting",
-            poster: "https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Trainspotting_ver2.jpg/250px-Trainspotting_ver2.jpg"
-          }
-        ]
-      })
-    }, 2000)
+
+    // setTimeout(() => {
+    //   this.setState({
+    //     movies: [
+    //       {
+    //         title: "Matrix",
+    //         poster: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/The_Matrix_Poster.jpg/220px-The_Matrix_Poster.jpg"
+    //       },
+    //       {
+    //         title: "Full metal Jacket",
+    //         poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCR7dxscYcXcZzqNRSz7KvdmdDJq3rVJKxOzxxLOLJmSg1uRZ_lQ"
+    //       },
+    //       {
+    //         title: "Oldboy",
+    //         poster: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Oldboykoreanposter.jpg/220px-Oldboykoreanposter.jpg"
+    //       },
+    //       {
+    //         title: "Star Wars",
+    //         poster: "https://images-na.ssl-images-amazon.com/images/I/81mhcR03dIL._SY445_.jpg"
+    //       },
+    //       {
+    //         title: "trainspotting",
+    //         poster: "https://upload.wikimedia.org/wikipedia/en/thumb/7/71/Trainspotting_ver2.jpg/250px-Trainspotting_ver2.jpg"
+    //       }
+    //     ]
+    //   })
+    // }, 2000)
   }
 
   _renderMovies = () => {
